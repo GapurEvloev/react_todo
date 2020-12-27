@@ -1,8 +1,33 @@
-body
+*
   margin: 0
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif
+  padding: 0
+  list-style: none
+  outline: none
+  font-family: 'Roboto', -apple-system, system-ui, sans-serif
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+
+body
+  font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif
   -webkit-font-smoothing: antialiased
   -moz-osx-font-smoothing: grayscale
 
 code
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace
+
+.todo
+  box-shadow: 1px 1px 1.25em #f3f3f3
+  max-width: 1440px
+  width: 100%
+  margin: auto
+  margin-top: 5vh
+  border: 1px solid #f1f1f1
+  border-radius: 0.625em
+  overflow: hidden
+
+  &__sidebar
+    background-color: #F4F6F8
+    width: 200 / 16  * 1em
+    min-height: 50vh
+    border-right: 1px solid #F1F1F1
+    padding: 60 / 16 * 1em 20 / 16 * 1em

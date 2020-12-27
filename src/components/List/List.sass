@@ -1,0 +1,59 @@
+.list
+  &:not(:last-child)
+    margin-bottom: 1.875em
+    
+  &__item
+    display: flex
+    align-items: center
+    cursor: pointer
+    padding: (10/16)*1em (12/16)*1em
+    // margin-bottom: (5/16)*1em
+
+    &--active
+      background-color: #ffffff
+      border-radius: (4/16)*1em
+      box-shadow: 0 (3/16)*1em (10/16)*1em  rgba(0, 0, 0, 0.04)
+
+      .list__icon
+        fill: #000000
+
+    &:hover
+      .list__icon
+        fill: #000000
+  
+  &__icon-wrap
+    display: inline-flex
+    align-items: center
+    width: 1.125em
+    height: 1.125em
+    margin-right: (6/16)*1em
+  
+  &__icon
+    transition: 0.2s all linear
+    fill: #7C7C7C
+
+  &__text
+    font-size: 0.875em
+
+  .badge
+    display: inline-block
+    margin: auto
+    width: (10/16)*1em
+    height: (10/16)*1em
+    border-radius: 100%
+    background-color: #000
+
+    &--ocean-green
+      background-color: #42B883
+    
+    &--sky-blue
+      background-color: #64C4ED
+    
+    &--pink
+      background-color: #FFBBCC
+    
+    &--fringy-flower
+      background-color: #B6E6BD
+    
+    &--tiara
+      background-color: #C9D1D3
