@@ -1,15 +1,18 @@
 import React from 'react';
+import classNames from 'classnames';
+
+import Badge from '../Badge';
 
 import './List.sass';
 
-const List = ({ items }) => {  
+const List = ({ items, isRemovable, onClick }) => {
   return (
-    <ul className="sidebar__list list">
+    <ul onClick={onClick} className="sidebar__list list">
       {
-        items.map(item => 
-          <li className={item.active ? "list__item list__item--active" : "list__item"}>
+        items.map((item, index) => 
+          <li key={index} className={classNames("list__item", item.className, {"list__item--active" : item.active})}>
             <span className="list__icon-wrap">
-              {item.icon ? item.icon : <i className={`badge badge--${item.color}`}></i>}
+              {item.icon ? item.icon : <Badge color={item.color} />}
             </span>
             <span className="list__text">{item.name}</span>
           </li>
@@ -32,3 +35,4 @@ const List = ({ items }) => {
 }
 
 export default List;
+// item.active ? "list__item list__item--active" : "list__item"

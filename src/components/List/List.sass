@@ -24,6 +24,7 @@
   &__icon-wrap
     display: inline-flex
     align-items: center
+    justify-content: center
     width: 1.125em
     height: 1.125em
     margin-right: (6/16)*1em
@@ -35,25 +36,22 @@
   &__text
     font-size: 0.875em
 
-  .badge
-    display: inline-block
-    margin: auto
-    width: (10/16)*1em
-    height: (10/16)*1em
-    border-radius: 100%
-    background-color: #000
+  &__add-button 
+    .list
+      &__icon
+        path
+          stroke: #868686
+          transition: 0.2s all linear
 
-    &--ocean-green
-      background-color: #42B883
-    
-    &--sky-blue
-      background-color: #64C4ED
-    
-    &--pink
-      background-color: #FFBBCC
-    
-    &--fringy-flower
-      background-color: #B6E6BD
-    
-    &--tiara
-      background-color: #C9D1D3
+      &__text
+        color: #767676
+        transition: 0.2s all linear  
+
+    &:hover,
+    &:focus
+      .list
+        &__icon
+          path
+            stroke: #111111
+        &__text
+          color: #111111

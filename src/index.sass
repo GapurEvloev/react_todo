@@ -31,3 +31,40 @@ code
     min-height: 50vh
     border-right: 1px solid #F1F1F1
     padding: 60 / 16 * 1em 20 / 16 * 1em
+
+.field
+  display: block
+  min-height: (32/16)*1em
+  background: #FFFFFF
+  border: 1px solid #EFEFEF
+  box-sizing: border-box
+  border-radius: (4/16)*1em
+  padding: (8/14)*1em (12/14)*1em
+  font-size: 0.875em
+  color: #a9a9a9
+  letter-spacing: (0.15/14)*1em
+  transition: 0.15s border linear
+
+  &:focus
+    border-color: #a9a9a9
+  
+  &::placeholder
+    color: #C7C7C7
+
+.button
+  min-height: (37/14)*1em
+  font-size: 0.875em
+  background: #4DD599
+  border: 0
+  border-radius: (4/14)*1em
+  color: #ffffff
+  line-height: (17/14)
+  cursor: pointer
+  transition: 0.15s background linear
+
+  &:hover
+    background-color: darken(#4DD599, 6%)
+  
+  &:active
+    background-color: darken(#4DD599, 10%)
+    

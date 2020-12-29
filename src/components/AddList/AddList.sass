@@ -1,0 +1,56 @@
+.add-list
+    &__popup
+        // 
+
+.add-popup
+    min-width: (235/16)*1em
+    background: #FFFFFF
+    box-shadow: 0px (6/16)*1em (10/16)*1em rgba(0, 0, 0, 0.05)
+    border-radius: (10/16)*1em
+    padding: 1.125em
+    box-sizing: border-box
+    position: relative
+    margin-top: -1.25em
+    margin-left: 0.75em
+
+    &__field
+        width: 100%
+        margin-bottom: 1em
+    
+    &__button
+        width: 100%
+
+    &__colors
+        display: flex
+        align-items: center
+        justify-content: flex-start
+        flex-wrap: wrap
+    
+    &__color
+        margin-bottom: 0.875em
+        display: inline-flex
+
+        &:not(:last-child)
+            margin-right: (5/16)*1em
+            
+
+    .badge
+        width: 1.25em
+        height: 1.25em
+        font-size: 1em
+        cursor: pointer
+        box-sizing: border-box
+
+        &.active
+            border: 2px solid #525252
+    
+    &__close
+        position: absolute
+        cursor: pointer
+        right: -1em
+        top: -1em
+        border-radius: 100% 
+        display: block
+        padding: 0.5em
+        width: 1.25em
+        height: 1.25em
