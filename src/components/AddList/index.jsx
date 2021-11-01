@@ -10,12 +10,24 @@ const AddList = ({ colors, onAdd }) => {
   const [visiblePopup, setVisiblePopup] = useState(false);
   const [inputValue, setInputValue] = useState("");
   const [seletedColor, setSeletedColor] = useState(colors[0].id);
+  const [isLoading, setIsLoading] = useState(false);
 
   const onClose = () => {
     setVisiblePopup(false);
     setInputValue('');
     setSeletedColor(colors[0].id);
   };
+  
+  const addList = () => {
+    if (!inputValue) {
+      alert('Введите название списка');
+      return;
+    }
+    setIsLoading(true);
+    const color = colors.find(c => c.id === seletedColor).name;
+    onAdd({ "id": Math.random(), "name": inputValue, color });
+    onClose();
+  }
 
   return (
     <div className="add-list">
@@ -79,7 +91,7 @@ const AddList = ({ colors, onAdd }) => {
             ))}
           </div>
 
-          <button className="button">Добавить</button>
+          <button onClick={addList} className="button">Добавить</button>
         </div>
       )}
     </div>

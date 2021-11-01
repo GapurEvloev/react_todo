@@ -4,9 +4,23 @@ import DB from "./assets/db.json";
 
 import List from "./components/List";
 import AddList from "./components/AddList";
+import Tasks from './components/Tasks';
 
 function App() {
-  // const [ value, setValue ] = useState('Hello world!');
+  const [ lists, setLists ] = useState(
+    DB.lists.map(item => {
+      item.color = DB.colors.find(color => color.id === item.colorId).name
+      return item
+    })
+  );
+
+  const onAddList = (obj) => {
+    const newList = [
+      ...lists,
+      obj
+    ]
+    setLists(newList)
+  }
 
   return (
     <div className="todo">
@@ -30,24 +44,16 @@ function App() {
             active: true
           }
         ]} />
-        <List items={
-          [
-            {
-              color: 'green',
-              name: 'Покупки'
-            },{
-              color: 'blue',
-              name: 'Фронтенд'
-            },{
-              color: 'pink',
-              name: 'Фильмы'
-            },
-          ]}
+        <List 
+          items={ lists }
           isRemovable
+          onRemove={(item) => console.log(item)}
         />
-        <AddList colors={DB.colors} />
+        <AddList onAdd={onAddList} colors={DB.colors} />
       </div>
-      <div className="todo__tasks"></div>
+      <div className="todo__tasks">
+        <Tasks/>
+      </div>
     </div>
   );
 }

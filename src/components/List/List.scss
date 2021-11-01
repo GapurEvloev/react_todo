@@ -1,4 +1,6 @@
 .list {
+  $self: &;
+
   &:not(:last-child) {
     margin-bottom: 1.875em;
   }
@@ -18,6 +20,19 @@
 
     &:hover {
       background: rgba(#ffffff, 0.7);
+
+      #{$self}__remove-icon {
+        opacity: 0.2;
+      }
+    }
+
+    #{$self}__remove-icon {
+      opacity: 0;
+      transition: opacity 0.15s ease-in-out;
+
+      &:hover {
+        opacity: 0.8;
+      }
     }
   }
 
@@ -40,6 +55,12 @@
   &__item_name {
     font-size: 0.875em;
     font-weight: 500;
+    flex: 1;
+    margin-right: 0.5em;
+  }
+
+  &__remove-icon {
+    opacity: 0;
   }
 
   &__add-button {
