@@ -1,29 +1,54 @@
 .list {
-
+  &:not(:last-child) {
+    margin-bottom: 1.875em;
+  }
+    
   &__item {
     display: flex;
     align-items: center;
     cursor: pointer;
-    padding: 10px 12px;
+    padding: 0.625em;
     transition: background-color 0.15s ease-in-out;
+    border-radius: 4px;
 
     &.active {
       background: #ffffff;
       box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.04);
-      border-radius: 4px;
+    }
+
+    &:hover {
+      background: rgba(#ffffff, 0.7);
     }
   }
 
   &__item_icon {
-    margin-right: 0.625em;
-    
     path {
       fill: #7C7C7C;
       transition: fill .3s linear;
     }
   }
 
+  &__item_mark {
+    width: 1.125em;
+    height: 1.125em;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 0.5em;
+  }
+
   &__item_name {
     font-size: 0.875em;
+    font-weight: 500;
+  }
+
+  &__add-button {
+    color: #767676;
+    transition: all 0.5s linear;
+
+    path {
+      stroke: #868686;
+      transition: all 0.5s linear;
+    }
   }
 }
