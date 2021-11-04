@@ -57,6 +57,18 @@
     font-weight: 500;
     flex: 1;
     margin-right: 0.5em;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    width: 160px;
+    white-space: nowrap;
+  }
+
+  &__item_count {
+    font-size: 0.75em;
+    font-weight: 500;
+    opacity: 0.5;
+    flex: 0;
+    margin-right: 1em;
   }
 
   &__remove-icon {
