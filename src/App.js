@@ -38,7 +38,7 @@ function App() {
   };
 
   const onEditTask = (listId, taskObj) => {
-    const newTaskText = window.prompt('Текст задачи', taskObj.text);
+    const newTaskText = window.prompt('Task text', taskObj.text);
 
     if (!newTaskText) {
       return;
@@ -61,12 +61,12 @@ function App() {
         text: newTaskText
       })
       .catch(() => {
-        alert('Не удалось обновить задачу');
+        alert('Task update failed');
       });
   };
 
   const onRemoveTask = (listId, taskId) => {
-    if (window.confirm('Вы действительно хотите удалить задачу?')) {
+    if (window.confirm('Do you really want to delete the task?')) {
       const newList = lists.map(item => {
         if (item.id === listId) {
           item.tasks = item.tasks.filter(task => task.id !== taskId);
@@ -75,7 +75,7 @@ function App() {
       });
       setLists(newList);
       axios.delete('http://localhost:3001/tasks/' + taskId).catch(() => {
-        alert('Не удалось удалить задачу');
+        alert('Failed to delete task');
       });
     }
   };
@@ -98,7 +98,7 @@ function App() {
         completed
       })
       .catch(() => {
-        alert('Не удалось обновить задачу');
+        alert('Task update failed');
       });
   };
 
@@ -145,7 +145,7 @@ function App() {
                   />
                 </svg>
               ),
-              name: "Все задачи"
+              name: "All tasks"
             },
           ]}
         />
@@ -163,7 +163,7 @@ function App() {
             isRemovable
           />
         ) : (
-          "Загрузка..."
+          "Loading..."
         )}
         <AddList onAdd={onAddList} colors={colors} />
       </div>

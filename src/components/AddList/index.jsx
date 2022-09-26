@@ -28,7 +28,7 @@ const AddList = ({ colors, onAdd }) => {
 
   const addList = () => {
     if (!inputValue) {
-      alert("Введите название списка");
+      alert("Enter the name of the list");
       return;
     }
     setIsLoading(true);
@@ -44,7 +44,7 @@ const AddList = ({ colors, onAdd }) => {
         onClose();
       })
       .catch(e => {
-        alert('Ошибка при добавлении списка!');
+        alert('Error when adding a list!');
       })
       .finally(() => {
         setIsLoading(false);
@@ -82,7 +82,7 @@ const AddList = ({ colors, onAdd }) => {
                 />
               </svg>
             ),
-            name: "Добавить список",
+            name: "Add list",
           },
         ]}
       />
@@ -99,7 +99,7 @@ const AddList = ({ colors, onAdd }) => {
             onChange={(e) => setInputValue(e.target.value)}
             className="field"
             type="text"
-            placeholder="Название списка"
+            placeholder="Name of the list"
           />
 
           <div className="add-list__popup-colors">
@@ -114,7 +114,7 @@ const AddList = ({ colors, onAdd }) => {
           </div>
 
           <button onClick={addList} className="button">
-            {isLoading ? 'Добавление...' : 'Добавить'}
+            {isLoading ? 'Adding...' : 'Add'}
           </button>
         </div>
       )}

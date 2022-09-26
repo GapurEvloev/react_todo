@@ -6,7 +6,7 @@ import App from './App';
 import './index.scss';
 
 ReactDOM.render(
-  <Router>
+  <Router basename={`/${"react_todo"}/`}>
     <App />
   </Router>,
   document.getElementById('root')

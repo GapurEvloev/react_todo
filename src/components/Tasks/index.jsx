@@ -19,7 +19,7 @@ const Tasks = ({
   withoutEmpty 
 }) => {
   const editTitle = () => {
-    const newTitle = window.prompt("Название списка", list.name);
+    const newTitle = window.prompt("Name of the list", list.name);
     if (newTitle) {
       onEditTitle(list.id, newTitle);
       axios
@@ -27,7 +27,7 @@ const Tasks = ({
           name: newTitle,
         })
         .catch(() => {
-          alert("Не удалось обновить название списка");
+          alert("Failed to update name of the list");
         });
     }
   };
@@ -43,7 +43,7 @@ const Tasks = ({
 
       <div className="tasks__items">
         {!withoutEmpty && list.tasks && !list.tasks.length && (
-          <h2>Задачи отсутствуют</h2>
+          <h2>There are no tasks</h2>
         )}
         {list.tasks &&
           list.tasks.map(task => (

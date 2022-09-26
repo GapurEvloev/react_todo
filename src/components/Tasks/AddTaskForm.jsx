@@ -29,7 +29,7 @@ const AddTaskForm = ({ list, onAddTask }) => {
         toggleFormVisible();
       })
       .catch(e => {
-        alert('Ошибка при добавлении задачи!');
+        alert('Error when adding a task!');
       })
       .finally(() => {
         setIsLoading(false);
@@ -41,7 +41,7 @@ const AddTaskForm = ({ list, onAddTask }) => {
       {!visibleForm ? (
         <div onClick={toggleFormVisible} className="tasks__form-new">
           <img src={addSvg} alt="Add icon" />
-          <span>Новая задача</span>
+          <span>New challenge</span>
         </div>
       ) : (
         <div className="tasks__form-block">
@@ -49,14 +49,14 @@ const AddTaskForm = ({ list, onAddTask }) => {
             value={inputValue}
             className="field"
             type="text"
-            placeholder="Текст задачи"
+            placeholder="Task text"
             onChange={e => setInputValue(e.target.value)}
           />
           <button disabled={isLoading} onClick={addTask} className="button">
-            {isLoading ? 'Добавление...' : 'Добавить задачу'}
+            {isLoading ? 'Adding...' : 'Add task'}
           </button>
           <button onClick={toggleFormVisible} className="button button--grey">
-            Отмена
+            Cancel
           </button>
         </div>
       )}
