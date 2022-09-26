@@ -33,7 +33,7 @@ const AddList = ({ colors, onAdd }) => {
     }
     setIsLoading(true);
     axios
-      .post("http://localhost:3001/lists", {
+      .post("https://my-json-server.typicode.com/GapurEvloev/react_todo/lists", {
         name: inputValue,
         colorId: seletedColor,
       })

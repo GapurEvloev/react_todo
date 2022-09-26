@@ -23,7 +23,7 @@ const AddTaskForm = ({ list, onAddTask }) => {
     };
     setIsLoading(true);
     axios
-      .post('http://localhost:3001/tasks', obj)
+      .post('https://my-json-server.typicode.com/GapurEvloev/react_todo/tasks', obj)
       .then(({ data }) => {
         onAddTask(list.id, data);
         toggleFormVisible();

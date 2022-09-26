@@ -13,11 +13,11 @@ function App() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3001/lists?_expand=color&_embed=tasks")
+      .get("https://my-json-server.typicode.com/GapurEvloev/react_todo/lists?_expand=color&_embed=tasks")
       .then(({ data }) => {
         setLists(data);
       });
-    axios.get("http://localhost:3001/colors").then(({ data }) => {
+    axios.get("https://my-json-server.typicode.com/GapurEvloev/react_todo/colors").then(({ data }) => {
       setColors(data);
     });
   }, []);
@@ -57,7 +57,7 @@ function App() {
     });
     setLists(newList);
     axios
-      .patch('http://localhost:3001/tasks/' + taskObj.id, {
+      .patch('https://my-json-server.typicode.com/GapurEvloev/react_todo/tasks/' + taskObj.id, {
         text: newTaskText
       })
       .catch(() => {
@@ -74,7 +74,7 @@ function App() {
         return item;
       });
       setLists(newList);
-      axios.delete('http://localhost:3001/tasks/' + taskId).catch(() => {
+      axios.delete('https://my-json-server.typicode.com/GapurEvloev/react_todo/tasks/' + taskId).catch(() => {
         alert('Failed to delete task');
       });
     }
@@ -94,7 +94,7 @@ function App() {
     });
     setLists(newList);
     axios
-      .patch('http://localhost:3001/tasks/' + taskId, {
+      .patch('https://my-json-server.typicode.com/GapurEvloev/react_todo/tasks/' + taskId, {
         completed
       })
       .catch(() => {
