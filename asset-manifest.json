@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/react_todo/static/css/main.c7300214.chunk.css",
+    "main.js": "/react_todo/static/js/main.a6ea5ad0.chunk.js",
+    "main.js.map": "/react_todo/static/js/main.a6ea5ad0.chunk.js.map",
+    "runtime-main.js": "/react_todo/static/js/runtime-main.466b73c9.js",
+    "runtime-main.js.map": "/react_todo/static/js/runtime-main.466b73c9.js.map",
+    "static/js/2.6ddabd60.chunk.js": "/react_todo/static/js/2.6ddabd60.chunk.js",
+    "static/js/2.6ddabd60.chunk.js.map": "/react_todo/static/js/2.6ddabd60.chunk.js.map",
+    "index.html": "/react_todo/index.html",
+    "static/css/main.c7300214.chunk.css.map": "/react_todo/static/css/main.c7300214.chunk.css.map",
+    "static/js/2.6ddabd60.chunk.js.LICENSE.txt": "/react_todo/static/js/2.6ddabd60.chunk.js.LICENSE.txt",
+    "static/media/add.c4fa83e1.svg": "/react_todo/static/media/add.c4fa83e1.svg",
+    "static/media/close.b83c2023.svg": "/react_todo/static/media/close.b83c2023.svg",
+    "static/media/edit.1bda04de.svg": "/react_todo/static/media/edit.1bda04de.svg",
+    "static/media/remove.f5660af3.svg": "/react_todo/static/media/remove.f5660af3.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.466b73c9.js",
+    "static/js/2.6ddabd60.chunk.js",
+    "static/css/main.c7300214.chunk.css",
+    "static/js/main.a6ea5ad0.chunk.js"
+  ]
+}
